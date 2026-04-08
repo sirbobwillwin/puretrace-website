@@ -32,12 +32,19 @@
 
     /* ── Age Gate ── */
     #age-gate {
-      position: fixed; inset: 0; z-index: 9999;
-      background: rgba(208,236,245,0.97);
-      display: flex; align-items: center; justify-content: center;
-      backdrop-filter: blur(6px);
-    }
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(208,236,245,0.97);
+  display: flex;
+  align-items: flex-start;   /* changed */
+  justify-content: center;
+  overflow-y: auto;          /* KEY FIX */
+  padding: 40px 0;          /* gives breathing room */
+  -webkit-overflow-scrolling: touch;
+}
     .gate-box {
+      max-height: none;
       background: linear-gradient(145deg, #ffffff, #e8f6fb);
       border: 1px solid rgba(26,143,168,0.35);
       border-radius: 16px;
